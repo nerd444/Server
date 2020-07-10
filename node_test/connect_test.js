@@ -10,8 +10,22 @@ let connection = mysql.createConnection(
     }
 );
 
-connection.query('select count(*) from memo', 
+// let insert_query = 'insert into memo (title, comment) \
+//                              values ("hi", "nice to meet you")'
+// connection.query(insert_query, function(error, result){
+//     console.log(result)
+// })
+
+// connection.query('select * from memo where title like "%h%"', 
+//     function(error, results, fields){
+//         console.log(results)
+//     })
+
+let q_like = "%he%"
+connection.query('select title from memo where title like ? and id =?',
+    [q_like , 1],
     function(error, results, fields){
         console.log(results)
     })
+
 connection.end()

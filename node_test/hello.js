@@ -214,3 +214,152 @@ let cook2 = {
 console.log(cook2.name + " " + cook2.age + " " + cook2.make())
 
 
+//200710
+
+// key : value (Object)
+let football = {
+    color : 'Blue',
+    size : 36,
+    isActive : true,
+    add : function(x,y){
+        let ret = x + y
+        return ret
+    }
+}
+result = football.add(3,4)
+console.log(result)
+
+let color = football.color
+console.log(color)
+
+// // java 랑 비교
+// class football {
+//     String color;
+//     public Football(){
+//         color = "blue";
+//     }
+//     // 메소드
+//     int add(int x, int y){
+//         int ret = x + y;
+//         return ret;
+//     }
+// }
+
+// 단일데이터
+let name = 'James'
+
+// Array (배열) : 데이터를 여러개!!!! 를 저장하기 위해서 사용.
+let names = ['James', 'John', 'Michael']
+
+// Array에 저장되어 있는 값을 가져오는 코드
+name[0]     // index 인덱스 : 0부터 시작
+name[1]
+name[2]
+
+console.log(names[0])
+console.log(names[1])
+console.log(names[2])
+
+
+let employee = [
+    {name:'James', age:24},
+    {name:'John', age:25},
+    {name:'Micheal', age:30}
+]
+
+employee[0]
+employee[1]
+employee[2]
+
+console.log(employee[1])
+
+employee[0].name
+employee[0].age
+employee[1].name
+employee[1].age
+employee[2].name
+employee[2].age
+
+console.log(employee[1].name)
+
+let people = [
+    {name:'Mike', age:24, 
+        pet:[{name:'A', type:'cat'},{name:"B", type:'dog'}]},
+    {name:'John', age:30, 
+        pet:[{name:'C', type:'cat'},{name:"D", type:'dog'}]},
+    {name:'Harry', age:29, 
+        pet:[       ]}
+]
+console.log(people[0])
+// 1. 첫번째 사람의 두번째 pet이름을 출력
+console.log(people[0].pet[1].name)
+// 2. 두번째 사람의 첫번째 pet은어떤 동물인가?
+console.log(people[1].pet[0].type)
+
+names = ['James', 'John', 'Michael']
+
+// 두번째 이름을 Mike로 변경.
+names[1] = 'Mike'
+console.log(names)
+
+// Chris 를 names 에 추가
+names.push('Chris')
+console.log(names)
+
+// pop은 맨 뒤의 원소 삭제(원소삭제)
+names.pop()
+console.log(names)
+
+// // 특정 위치의 원소 삭제
+// names.splice(1)
+
+// // splice 함수 : 파라미터 기본 2개
+// // splice(start, count)
+// console.log(names)
+
+
+// array의 모든 원소를 하나로 합친다.
+let ret_names = names.join('-')
+console.log(ret_names)
+
+// filter
+let ret_filter = names.filter(name => name.length > 4)
+console.log(ret_filter)
+
+// unshift()
+
+let arr1 = [1,2,3]
+
+arr1.unshift(100)
+console.log(arr1)
+
+// splice : 내가 원하는 위치에서부터 데이터를 추출
+let arr2 = ['one', 'two', 'three', 'four']
+// 두번째 데이터부터 데이터를끝까지 가져온다.
+let ret_arr2 = arr2.splice(1,3)
+console.log(arr2)
+console.log(ret_arr2)
+
+// 반복문
+names = ['James', 'John', 'Michael']
+
+// 1. Array에 저장된 모든 원소 출력(이거추천=안드로이드랑 같아서 안헷갈림)
+for(let i = 0; i < names.length; i++){
+    console.log(names[i])
+}
+// 2. Array에 내장된 반복(loop) 메소드.
+names.forEach(function(name){
+    console.log(name)
+})
+
+num_arr = [2,5,8,10]
+
+// 각원소를 제곱해서 화면에 출력
+for(let i = 0; i < num_arr.length; i++){
+    // console.log(num_arr[i]**2)
+    let data = num_arr[i]**2
+    console.log(data)
+}
+
+
+
